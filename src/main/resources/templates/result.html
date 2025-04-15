@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>結果表示</title>
+</head>
+<body>
+<h2>結果</h2>
+
+<P th:if="${result != null}" th:text="${result}"></P>
+
+<h3>最近の戦績（最大10件）</h3>
+<ul>
+    <li th:each="r : ${history}" th:text="${r}"></li>
+</ul>
+
+<p th:text="|勝ち数: ${winCount} / 10|"></p>
+
+<a th:href="@{/menu}">← メニューに戻る</a>
+
+</body>
+</html>

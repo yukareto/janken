@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>じゃんけん</title>
+</head>
+<body>
+<h2>じゃんけんをしてください</h2>
+<form action="/play" method="post">
+    <button name="hand" type="submit" value="グー">グー</button>
+    <button name="hand" type="submit" value="チョキ">チョキ</button>
+    <button name="hand" type="submit" value="パー">パー</button>
+</form>
+
+<a th:href="@{/menu}">← メニューに戻る</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ログイン</title>
+</head>
+<body>
+<h2>じゃんけんゲーム ログイン</h2>
+<form action="/login" method="post">
+    <label>ID: <input name="id" type="text"></label><br>
+    <label>パスワード: <input name="password" type="password"></label><br>
+    <button type="submit">ログイン</button>
+</form>
+<p style="color:red;" th:text="${error}"></p>
+</body>
+</html>
