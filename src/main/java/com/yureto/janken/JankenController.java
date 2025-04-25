@@ -29,6 +29,9 @@ public class JankenController {
                              HttpSession session,
                              Model model) {
         User user = (User) session.getAttribute("user");
+        if (user == null) {
+            throw new IllegalStateException("ログイン情報がありません。 再度ログインしてください。");
+        }
 
         int computerIndex = random.nextInt(3);
         String computerHand = hands[computerIndex];
